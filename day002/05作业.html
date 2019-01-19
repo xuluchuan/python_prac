@@ -1055,35 +1055,398 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>03初始编码</title></head><body><article class="markdown-body"><h1 id="_1">初始编码<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<h2 id="ascii">ascii<a class="headerlink" href="#ascii" title="Permanent link"></a></h2>
+</style><title>05作业</title></head><body><article class="markdown-body"><h1 id="_1">作业<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="1truefalse">1.判断下列逻辑语句的True和False<a class="headerlink" href="#1truefalse" title="Permanent link"></a></h2>
 <ul>
-<li>八个二进制位bit（一个字节Byte）对应一个英文或其他字符</li>
-<li>设计之初，七位为128种可能，预留一位0</li>
-<li>1B = 8b</li>
-<li>1KB = 1024B</li>
-<li>1MB = 1024KB</li>
-<li>1GB = 1024MB</li>
-<li>1TB = 1024GB</li>
-<li>python2默认</li>
+<li>1 &gt; 1 or 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6</li>
 </ul>
-<h2 id="unicode">万国码unicode<a class="headerlink" href="#unicode" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>F or T or (F and T and T) or F
+F or T or F or F
+T or F or F
+T or F
+T
+</pre></div>
+
 <ul>
-<li>中文9万个，16位 2个字节 65535也无法表达完</li>
-<li>1个字节，所有英文，特殊字符，数字</li>
-<li>4个字节，表示中文</li>
+<li>not 2 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6</li>
 </ul>
-<h2 id="utf-8">utf-8<a class="headerlink" href="#utf-8" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>not T and T or F and T and T or F
+(F and T) or (F and T and T) or F
+F or F or F
+F
+</pre></div>
+
 <ul>
-<li>unicode升级</li>
-<li>最少用8位表示一个字符</li>
-<li>1个字节英文</li>
-<li>3个字节中文</li>
-<li>python3默认</li>
+<li>1 &gt; 2 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 or 9 &lt; 8 and 4 &gt; 6 or 3 &lt; 2</li>
 </ul>
-<h2 id="gbk">gbk<a class="headerlink" href="#gbk" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>(F and T) or (F and T) or (F and F) or F
+F or F or F or F
+F
+</pre></div>
+
+<h2 id="2">2. 求出下列逻辑语句的值<a class="headerlink" href="#2" title="Permanent link"></a></h2>
 <ul>
-<li>国内使用</li>
-<li>2个字节中文</li>
-<li>dos编码</li>
+<li>
+<ol>
+<li>8 or 3 and 4 or 2 and 0 or 9 and 7</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>8 or （3 and 4) or (2 and 0) or (9 and 7)
+8 or ...
+8
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>0 or 2 and 3 and 4 or 6 and 0 or 3</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>0 or (2 and 3 and 4) or (6 and 0) or 3
+0 or 4 or 0 or 3
+4 or 0 or 3
+4 or ...
+4
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>5 and 9 or 10 and 2 or 3 and 5 or 4 or 5</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>(5 and 9) or (10 and 2) or (3 and 5) or 4 or 5
+9 or ...
+9
+</pre></div>
+
+<h2 id="3">3.下列结果是什么<a class="headerlink" href="#3" title="Permanent link"></a></h2>
+<ul>
+<li>
+<ol>
+<li>6 or 2 &gt; 1 </li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>6 or ...
+6
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>3 or 2 &gt; 1</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>3 or ...
+3
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>0 or 5 &lt; 4</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>0 or False
+False
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>5 &lt; 4 or 3</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>False or 3
+3
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>2 &gt; 1 or 6</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>True or 6
+True
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>3 and 2 &gt; 1</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>3 and True
+True
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>0 and 3 &gt; 1</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>0 and True
+0
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>2 &gt; 1 and 3</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>True and 3
+3
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>3 &gt; 1 and 0</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>True and 0
+0
+</pre></div>
+
+<ul>
+<li>
+<ol>
+<li>3 &gt; 1 and 2 or 2 &lt; 3 and 3 and 4 or 3 &gt; 2</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>(True and 2) or (True and 3 and 4) or True
+2 or ...
+2
+</pre></div>
+
+<h2 id="4">4. 简述变量命名规范<a class="headerlink" href="#4" title="Permanent link"></a></h2>
+<ul>
+<li>使用字母，数字，下划线，数字不在第一位</li>
+<li>具有描述意义的英文单词，不能使用拼音或汉字</li>
+<li>不能使用关键字</li>
+<li>变量用全部小写和下划线连接单词，常量用全部大写和下划线连接单词</li>
+</ul>
+<h2 id="5-nameinput-name">5. name=input(&ldquo;&gt;&gt;&gt;&rdquo;) name是什么数据类型<a class="headerlink" href="#5-nameinput-name" title="Permanent link"></a></h2>
+<ul>
+<li>str 字符串类型</li>
+</ul>
+<h2 id="6-if">6. if条件语句的基本结构<a class="headerlink" href="#6-if" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>if
+if else
+if elif elif else
+if 嵌套
+</pre></div>
+
+<h2 id="7-while">7. while循环基本结构<a class="headerlink" href="#7-while" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>while 条件:
+    循环体
+else：
+    正常结束循环执行语句
+</pre></div>
+
+<h2 id="8-1-2-3-99-88">8. 计算1 - 2 + 3 - &hellip; + 99 中除了 88所有数的和<a class="headerlink" href="#8-1-2-3-99-88" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="c1"># 计算1 - 2 + 3 - ... + 99 中除了 88所有数的和</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sum_result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">99</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">88</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sum_result</span> <span class="o">-=</span> <span class="n">count</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sum_result</span> <span class="o">+=</span> <span class="n">count</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sum_result</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/sum88.py
+138
+</pre></div>
+
+<ul>
+<li>计算1 - 2 + 3 - &hellip; - 99 中除了 88所有数的和</li>
+</ul>
+<div class="codehilite"><pre># 计算1 - 2 + 3 - ... + 99 中除了 88所有数的和
+
+count = 0
+sum_result = 0
+while count &lt; 99:
+    count += 1
+    if count == 88:
+        continue
+    if count % 2 == 0:
+        sum_result -= count
+    else:
+        sum_result += count
+print(sum_result)
+</pre></div>
+
+<ul>
+<li>138</li>
+</ul>
+<div class="codehilite"><pre># 计算1 - 2 + 3 - ... - 99 中除了 88所有数的和
+
+count = 0
+sign = 1
+sum_result = 0
+while count &lt; 99:
+    count += 1
+    if count == 88:
+        continue
+    sum_result += count * sign
+    sign = -sign
+print(sum_result)
+</pre></div>
+
+<ul>
+<li>-50</li>
+</ul>
+<h3 id="9">9. 用户登录(三次输错机会) 且每次输入错误时显示剩余错误次数(字符串格式化)<a class="headerlink" href="#9" title="Permanent link"></a></h3>
+<div class="codehilite"><pre><span class="n">count</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入用户名：&#39;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入密码：&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">username</span> <span class="o">==</span> <span class="s">&#39;xuluchuan&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">password</span> <span class="o">==</span> <span class="s">&#39;123456&#39;</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;登录成功！&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;登录失败！请重新登录!您还有</span><span class="si">%d</span><span class="s">次输入密码的机会&#39;</span> <span class="o">%</span> <span class="n">count</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;登录失败！您已经连续输错3次，用户名已经锁住，请联系管理员！&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/login_format.py
+请输入用户名：1
+请输入密码：1
+登录失败！请重新登录!您还有2次输入密码的机会
+请输入用户名：1
+请输入密码：1
+登录失败！请重新登录!您还有1次输入密码的机会
+请输入用户名：1
+请输入密码：1
+登录失败！您已经输错3次，用户名已经锁住，请联系管理员！
+</pre></div>
+
+<h2 id="10-asciiunicodeutf-8">10. 简述ascii，unicode，utf-8的编码关系<a class="headerlink" href="#10-asciiunicodeutf-8" title="Permanent link"></a></h2>
+<ul>
+<li>ascii是8位的编码，其中第一位为保留位为0，128种情况，只包括英文字符和一些特殊符号，数字</li>
+<li>unicode是是万国码，中文使用4个字节编码，浪费存储空间</li>
+<li>utf-8是至少使用1个字节8位进行编码的unicode升级版，英文1个字节，中文3个字节</li>
+</ul>
+<h2 id="11">11. 简述字节和位的关系<a class="headerlink" href="#11" title="Permanent link"></a></h2>
+<ul>
+<li>一位是一个二进制位，取值为0或1</li>
+<li>1个字节(Byte)等于8位(bit)</li>
+</ul>
+<h2 id="12-utf-8gbk">12. &ldquo;天安门&rdquo; 使用UTF-8占用几个字节，使用GBK占用几个字节？<a class="headerlink" href="#12-utf-8gbk" title="Permanent link"></a></h2>
+<ul>
+<li>UTF-8 9字节</li>
+<li>GBK 6字节</li>
+</ul>
+<h2 id="13-xxxxxxxxx">13. 制作趣味模板程序需求：等待用户输入名字，地点，爱好，根据用户的名字和爱好进行任意显示：敬爱可亲的xxx，最喜欢在xxx地方干xxx<a class="headerlink" href="#13-xxxxxxxxx" title="Permanent link"></a></h2>
+<div class="codehilite"><pre># 制作趣味模板程序需求：等待用户输入名字，地点，爱好，根据用户的名字和爱好进行任意显示：
+# 敬爱可亲的xxx，最喜欢在xxx地方干xxx
+
+name = input(&#39;请输入您的姓名：&#39;)
+hobby = input(&#39;请输入您最喜欢做的事情：&#39;)
+place = input(&#39;请输入您做最喜欢的事情所在的位置：&#39;)
+print(&#39;敬爱可亲的%s，最喜欢在%s地方干%s&#39; % (name, place, hobby))
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/hobby_mould.py
+请输入您的姓名：徐鲁川
+请输入您最喜欢做的事情：踢足球
+请输入您做最喜欢的事情所在的位置：广州
+敬爱可亲的徐鲁川，最喜欢在广州地方干踢足球
+</pre></div>
+
+<h2 id="14">14. 等待用户输入内容，检测用户输入内容中是否包括敏感字符，如果存在，提示：&rdquo;存在敏感字符，请重新输入&rdquo;,并允许用户重新输入，并打印，敏感字符：小粉嫩，大铁锤<a class="headerlink" href="#14" title="Permanent link"></a></h2>
+<div class="codehilite"><pre># 等待用户输入内容，检测用户输入内容中是否包括敏感字符，
+# 如果存在，提示：&quot;存在敏感字符，请重新输入&quot;,
+# 并允许用户重新输入，并打印，
+# 敏感字符：小粉嫩，大铁锤
+
+while True:
+    remark = input(&#39;请输入评论：&#39;)
+    if remark.find(&#39;小粉嫩&#39;) != -1 or remark.find(&#39;大铁锤&#39;) != -1:
+        print(&#39;存在敏感字符，请重新输入&#39;)
+    else:
+        break
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/sensitive_word.py
+请输入评论：小粉嫩
+存在敏感字符，请重新输入
+请输入评论：大铁锤
+存在敏感字符，请重新输入
+请输入评论：小粉嫩喜欢大铁锤
+存在敏感字符，请重新输入
+请输入评论：粉嫩喜欢铁锤
+</pre></div>
+
+<h2 id="15">15. 单行注释，多行注释<a class="headerlink" href="#15" title="Permanent link"></a></h2>
+<ul>
+<li># 单行注释</li>
+<li>一对 &lsquo;&rsquo;&lsquo; 或 &ldquo;&rdquo;&rdquo; 多行注释</li>
+</ul>
+<h2 id="16-python2python3">16. 简述你所知道的python2与python3的区别<a class="headerlink" href="#16-python2python3" title="Permanent link"></a></h2>
+<ul>
+<li>1.python2默认是ascii编码，支持中文要加入<code># -*- encoding:utf-8 -*-</code> python3 utf-8支持中文</li>
+<li>2.python2的print是关键字print &lsquo;a&rsquo;，python3的print是函数 print(&lsquo;a&rsquo;)</li>
+</ul>
+<h2 id="17">17. 看代码书写结果：<a class="headerlink" href="#17" title="Permanent link"></a></h2>
+<div class="codehilite"><pre>a = 1 &gt; 2 or 4 &lt; 7 and 8 == 8
+print(a)
+</pre></div>
+
+<div class="codehilite"><pre>a = False or True and True
+a = False or True
+a = True
+</pre></div>
+
+<h2 id="18-continuebreak">18. continue与break区别<a class="headerlink" href="#18-continuebreak" title="Permanent link"></a></h2>
+<ul>
+<li>continue是中止本次循环，进入下次循环</li>
+<li>break是跳出循环</li>
+</ul>
+<h2 id="19">19. 看代码，写结果<a class="headerlink" href="#19" title="Permanent link"></a></h2>
+<ul>
+<li>位运算符：&amp; | !</li>
+<li>负数补码=反码+1</li>
+<li>8421码</li>
+</ul>
+<div class="codehilite"><pre>a=12&amp;127
+print(a)
+</pre></div>
+
+<ul>
+<li>12 = 8 + 4 00001100</li>
+<li>127 = 64 + 32 + 16 + 8 + 4 + 2 + 1 01111111</li>
+</ul>
+<div class="codehilite"><pre>00001100
+01111111
+---------
+00001100
+</pre></div>
+
+<ul>
+<li>结果为12</li>
 </ul></article></body></html>
