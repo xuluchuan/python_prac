@@ -1055,36 +1055,14 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>03初始编码</title></head><body><article class="markdown-body"><h1 id="_1">初始编码<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<h2 id="ascii">ascii<a class="headerlink" href="#ascii" title="Permanent link"></a></h2>
+</style><title>01数据类型</title></head><body><article class="markdown-body"><h1 id="_1">数据类型<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h3 id="_2">分类<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
 <ul>
-<li>八个二进制位bit（一个字节Byte）对应一个英文或其他字符</li>
-<li>设计之初，七位为128种可能，预留一位0</li>
-<li>1B = 8b</li>
-<li>1KB = 1024B</li>
-<li>1MB = 1024KB</li>
-<li>1GB = 1024MB</li>
-<li>1TB = 1024GB</li>
-<li>python2默认</li>
-</ul>
-<h2 id="unicode">万国码unicode<a class="headerlink" href="#unicode" title="Permanent link"></a></h2>
-<ul>
-<li>16位 一开始有2个字节 65536也无法表达完9万个汉字</li>
-<li>升级到4个字节，32位，表示中文</li>
-</ul>
-<h2 id="utf-8">utf-8<a class="headerlink" href="#utf-8" title="Permanent link"></a></h2>
-<ul>
-<li>因为4个字节浪费存储空间，unicode升级</li>
-<li>最少用8位表示一个字符 为 utf-8</li>
-<li>1个字节英文</li>
-<li>2个字节表示欧洲字母</li>
-<li>3个字节中文</li>
-<li>python3默认</li>
-</ul>
-<h2 id="gbk">gbk<a class="headerlink" href="#gbk" title="Permanent link"></a></h2>
-<ul>
-<li>国内使用</li>
-<li>2个字节中文</li>
-<li>1个字节英文</li>
-<li>windows默认</li>
+<li>int: 数字 1 2 3用于计算</li>
+<li>bool: 布尔值 True False 判断条件</li>
+<li>str: 字符串 &lsquo;&rsquo; 或 &ldquo;&rdquo; 或 &ldquo;&rdquo;&rdquo; &ldquo;&rdquo;&rdquo; 储存少量数据</li>
+<li>list: 列表 [1, 2, 3] 储存大量数据</li>
+<li>tuple: 元组 (1, 2, 3) 储存大量数据 只读列表 不能修改</li>
+<li>dict: 字典 {&lsquo;name&rsquo;:&rsquo;xu&rsquo;, &lsquo;age&rsquo;:&lsquo;14&rsquo;} 键值对 储存大量关系型数据 查询速度快</li>
+<li>set: 集合 (1, 2) 元素唯一 开发用的少</li>
 </ul></article></body></html>

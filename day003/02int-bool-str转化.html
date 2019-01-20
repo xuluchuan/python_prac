@@ -1055,36 +1055,69 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>03初始编码</title></head><body><article class="markdown-body"><h1 id="_1">初始编码<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<h2 id="ascii">ascii<a class="headerlink" href="#ascii" title="Permanent link"></a></h2>
+</style><title>02int-bool-str转化</title></head><body><article class="markdown-body"><h1 id="int-bool-str">int-bool-str转化<a class="headerlink" href="#int-bool-str" title="Permanent link"></a></h1>
+<h2 id="int">int方法<a class="headerlink" href="#int" title="Permanent link"></a></h2>
 <ul>
-<li>八个二进制位bit（一个字节Byte）对应一个英文或其他字符</li>
-<li>设计之初，七位为128种可能，预留一位0</li>
-<li>1B = 8b</li>
-<li>1KB = 1024B</li>
-<li>1MB = 1024KB</li>
-<li>1GB = 1024MB</li>
-<li>1TB = 1024GB</li>
-<li>python2默认</li>
+<li>i.bit_length() 转换为二进制最小的位数</li>
 </ul>
-<h2 id="unicode">万国码unicode<a class="headerlink" href="#unicode" title="Permanent link"></a></h2>
+<h2 id="bool">bool方法<a class="headerlink" href="#bool" title="Permanent link"></a></h2>
 <ul>
-<li>16位 一开始有2个字节 65536也无法表达完9万个汉字</li>
-<li>升级到4个字节，32位，表示中文</li>
+<li>True或False</li>
 </ul>
-<h2 id="utf-8">utf-8<a class="headerlink" href="#utf-8" title="Permanent link"></a></h2>
+<h2 id="int-bool-str_1">int-bool-str转换<a class="headerlink" href="#int-bool-str_1" title="Permanent link"></a></h2>
 <ul>
-<li>因为4个字节浪费存储空间，unicode升级</li>
-<li>最少用8位表示一个字符 为 utf-8</li>
-<li>1个字节英文</li>
-<li>2个字节表示欧洲字母</li>
-<li>3个字节中文</li>
-<li>python3默认</li>
+<li>int转为str str(INT) </li>
+<li>str转为int 要求str为数字型，int(STR) 转换错误ValueError</li>
+<li>int转为bool bool(INT) 非0为True，0为False</li>
+<li>bool转为int int(BOOL) True为1，False为0</li>
+<li>while 1比while True的效率高</li>
 </ul>
-<h2 id="gbk">gbk<a class="headerlink" href="#gbk" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
 <ul>
-<li>国内使用</li>
-<li>2个字节中文</li>
-<li>1个字节英文</li>
-<li>windows默认</li>
-</ul></article></body></html>
+<li>str转为bool bool(STR) 非空字符串为True，空字符串&rsquo;&lsquo;为False</li>
+</ul>
+<div class="codehilite"><pre><span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;输入为空&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+<div class="codehilite"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">bit_length</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s">&#39;4&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">True</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">False</span><span class="p">))</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;hello world&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入用户名：&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;输入为空&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;您的用户名是</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day003/int_bool_str.py
+2
+3
+4
+True
+False
+1
+0
+hello world
+hello world
+hello world
+请输入用户名：
+输入为空
+</pre></div></article></body></html>

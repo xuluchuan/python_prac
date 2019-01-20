@@ -1055,36 +1055,153 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>03初始编码</title></head><body><article class="markdown-body"><h1 id="_1">初始编码<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<h2 id="ascii">ascii<a class="headerlink" href="#ascii" title="Permanent link"></a></h2>
+</style><title>04str操作</title></head><body><article class="markdown-body"><h1 id="str">str操作<a class="headerlink" href="#str" title="Permanent link"></a></h1>
 <ul>
-<li>八个二进制位bit（一个字节Byte）对应一个英文或其他字符</li>
-<li>设计之初，七位为128种可能，预留一位0</li>
-<li>1B = 8b</li>
-<li>1KB = 1024B</li>
-<li>1MB = 1024KB</li>
-<li>1GB = 1024MB</li>
-<li>1TB = 1024GB</li>
-<li>python2默认</li>
+<li>首字母大写：capitalize</li>
+<li>全部变大写：upper</li>
+<li>全部变小写：lower<ul>
+<li>验证码不区分大小写</li>
 </ul>
-<h2 id="unicode">万国码unicode<a class="headerlink" href="#unicode" title="Permanent link"></a></h2>
-<ul>
-<li>16位 一开始有2个字节 65536也无法表达完9万个汉字</li>
-<li>升级到4个字节，32位，表示中文</li>
+</li>
 </ul>
-<h2 id="utf-8">utf-8<a class="headerlink" href="#utf-8" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="n">code</span> <span class="o">=</span> <span class="s">&#39;acEQ&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;验证码为</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">code</span><span class="p">)</span>
+<span class="n">your_code</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入验证码，不区分大小写：&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">code</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">your_code</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;验证码输入成功&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;验证码输入错误&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day003/code/verify_code.py
+验证码为acEQ
+请输入验证码，不区分大小写：AACQ
+验证码输入错误
+</pre></div>
+
 <ul>
-<li>因为4个字节浪费存储空间，unicode升级</li>
-<li>最少用8位表示一个字符 为 utf-8</li>
-<li>1个字节英文</li>
-<li>2个字节表示欧洲字母</li>
-<li>3个字节中文</li>
-<li>python3默认</li>
+<li>大小写翻转：swapcase()</li>
+<li>每个隔开(特殊字符或数字)的单词首字母大写：title()</li>
+<li>居中对齐 center(width,fillchar=None) 默认是空格填充</li>
+<li>居左对齐 ljust 居右对齐 rjust</li>
+<li>tab补全 expandTabs tab转换为空格 默认逢8进1</li>
+<li>公共方法：长度 len(STR) </li>
+<li>以..为开头：startswith(子串) (子串, 开始, 结束)可写区间</li>
+<li>以..为结尾：endswith(子串)</li>
+<li>查找 find(子串) (子串,开始,结束) 返回第一个找到的索引，找不到返回-1 首选find</li>
+<li>查找 index(子串) (子串,开始,结束) 返回第一个找到的索引，找不到报错</li>
+<li>rfind rindex 从右到左找</li>
+<li>去空格 strip() 默认去掉左右的空格 (%@) 可以删除其他字符 rstrip 右 lstrip 左</li>
+<li>统计个数 count() 找不到为0</li>
+<li>拆分成列表 split() (分隔符) </li>
+<li>拆分成三段 partition(分隔符) </li>
+<li>格式化输出 format 完形填空</li>
 </ul>
-<h2 id="gbk">gbk<a class="headerlink" href="#gbk" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="n">s</span><span class="o">=</span><span class="s">&#39;my name is {}, my age is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1"># 按照位置</span>
+<span class="n">s</span><span class="o">=</span><span class="s">&#39;my name is {0}, my age is {1}, my name is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1"># 按照索引</span>
+<span class="n">s</span><span class="o">=</span><span class="s">&#39;my name is {name}, my age is {age}, my name is {name}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span> <span class="c1"># 按照键值对</span>
+</pre></div>
+
 <ul>
-<li>国内使用</li>
-<li>2个字节中文</li>
-<li>1个字节英文</li>
-<li>windows默认</li>
-</ul></article></body></html>
+<li>替换，replace(原子串，新子串，次数) 默认全替换，可指定次数</li>
+<li>
+<p>是什么 isalnum(是否是字母数字) isalpha(是否是字母) isdecimal(是否是数字)</p>
+</li>
+<li>
+<p>for循环迭代字符串</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+<ul>
+<li>判断是否有子串 </li>
+</ul>
+<div class="codehilite"><pre><span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;敏感字符&quot;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&#39;hello World&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">swapcase</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;hello</span><span class="se">\t</span><span class="s">World&#39;</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;he&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;e&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">&#39;e&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39; hello world &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;* hello world *&#39;</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">&#39;* &#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;* hello world *&#39;</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s">&#39;* &#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;hello world !&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">))</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="s">&#39;my name is {}, my age is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="s">&#39;my name is {0}, my age is {1}, my name is {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="s">&#39;my name is {name}, my age is {age}, my name is {name}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;xu&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">,</span> <span class="s">&#39;L&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;l&#39;</span><span class="p">,</span> <span class="s">&#39;L&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+<span class="k">if</span> <span class="s">&#39;o&#39;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;敏感字符&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day003/code/str_count.py
+Hello world
+HELLO WORLD
+hello world
+HELLO wORLD
+****hello World*****
+hello World*********
+*********hello World
+hello   World
+11
+True
+True
+1
+1
+9
+hello world
+* hello world
+hello world *
+3
+1
+[&#39;hello&#39;, &#39;World&#39;]
+(&#39;hello&#39;, &#39; &#39;, &#39;world !&#39;)
+my name is xu, my age is 18
+my name is xu, my age is 18, my name is xu
+my name is xu, my age is 18, my name is xu
+heLLo WorLd
+heLlo World
+False
+False
+False
+h 
+e 
+l 
+l 
+o 
+
+W 
+o 
+r 
+l 
+d 
+敏感字符
+</pre></div></article></body></html>
