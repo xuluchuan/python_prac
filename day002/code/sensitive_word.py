@@ -5,7 +5,10 @@
 
 while True:
     remark = input('请输入评论：')
-    if remark.find('小粉嫩') != -1 or remark.find('大铁锤') != -1:
-        print('存在敏感字符，请重新输入')
+    remark_bans = ['小粉嫩', '大铁锤']
+    for ban in remark_bans:
+        if ban in remark:
+            print('存在敏感字符，请重新输入')
+            break
     else:
         break

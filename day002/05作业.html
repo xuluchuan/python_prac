@@ -1283,36 +1283,36 @@ else：
 <ul>
 <li>计算1 - 2 + 3 - &hellip; - 99 中除了 88所有数的和</li>
 </ul>
-<div class="codehilite"><pre># 计算1 - 2 + 3 - ... + 99 中除了 88所有数的和
+<div class="codehilite"><pre><span class="c1"># 计算1 - 2 + 3 - ... + 99 中除了 88所有数的和</span>
 
-count = 0
-sum_result = 0
-while count &lt; 99:
-    count += 1
-    if count == 88:
-        continue
-    if count % 2 == 0:
-        sum_result -= count
-    else:
-        sum_result += count
-print(sum_result)
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sum_result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">99</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">88</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sum_result</span> <span class="o">-=</span> <span class="n">count</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sum_result</span> <span class="o">+=</span> <span class="n">count</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sum_result</span><span class="p">)</span>
 </pre></div>
 
 <ul>
 <li>138</li>
 </ul>
-<div class="codehilite"><pre># 计算1 - 2 + 3 - ... - 99 中除了 88所有数的和
+<div class="codehilite"><pre><span class="c1"># 计算1 - 2 + 3 - ... - 99 中除了 88所有数的和</span>
 
-count = 0
-sign = 1
-sum_result = 0
-while count &lt; 99:
-    count += 1
-    if count == 88:
-        continue
-    sum_result += count * sign
-    sign = -sign
-print(sum_result)
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sign</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sum_result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">99</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">88</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">sum_result</span> <span class="o">+=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">sign</span>
+    <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="n">sign</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sum_result</span><span class="p">)</span>
 </pre></div>
 
 <ul>
@@ -1362,13 +1362,13 @@ print(sum_result)
 <li>GBK 6字节</li>
 </ul>
 <h2 id="13-xxxxxxxxx">13. 制作趣味模板程序需求：等待用户输入名字，地点，爱好，根据用户的名字和爱好进行任意显示：敬爱可亲的xxx，最喜欢在xxx地方干xxx<a class="headerlink" href="#13-xxxxxxxxx" title="Permanent link"></a></h2>
-<div class="codehilite"><pre># 制作趣味模板程序需求：等待用户输入名字，地点，爱好，根据用户的名字和爱好进行任意显示：
-# 敬爱可亲的xxx，最喜欢在xxx地方干xxx
+<div class="codehilite"><pre><span class="c1"># 制作趣味模板程序需求：等待用户输入名字，地点，爱好，根据用户的名字和爱好进行任意显示：</span>
+<span class="c1"># 敬爱可亲的xxx，最喜欢在xxx地方干xxx</span>
 
-name = input(&#39;请输入您的姓名：&#39;)
-hobby = input(&#39;请输入您最喜欢做的事情：&#39;)
-place = input(&#39;请输入您做最喜欢的事情所在的位置：&#39;)
-print(&#39;敬爱可亲的%s，最喜欢在%s地方干%s&#39; % (name, place, hobby))
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入您的姓名：&#39;</span><span class="p">)</span>
+<span class="n">hobby</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入您最喜欢做的事情：&#39;</span><span class="p">)</span>
+<span class="n">place</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入您做最喜欢的事情所在的位置：&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;敬爱可亲的</span><span class="si">%s</span><span class="s">，最喜欢在</span><span class="si">%s</span><span class="s">地方干</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">hobby</span><span class="p">))</span>
 </pre></div>
 
 <div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/hobby_mould.py
@@ -1379,17 +1379,20 @@ print(&#39;敬爱可亲的%s，最喜欢在%s地方干%s&#39; % (name, place, ho
 </pre></div>
 
 <h2 id="14">14. 等待用户输入内容，检测用户输入内容中是否包括敏感字符，如果存在，提示：&rdquo;存在敏感字符，请重新输入&rdquo;,并允许用户重新输入，并打印，敏感字符：小粉嫩，大铁锤<a class="headerlink" href="#14" title="Permanent link"></a></h2>
-<div class="codehilite"><pre># 等待用户输入内容，检测用户输入内容中是否包括敏感字符，
-# 如果存在，提示：&quot;存在敏感字符，请重新输入&quot;,
-# 并允许用户重新输入，并打印，
-# 敏感字符：小粉嫩，大铁锤
+<div class="codehilite"><pre><span class="c1"># 等待用户输入内容，检测用户输入内容中是否包括敏感字符，</span>
+<span class="c1"># 如果存在，提示：&quot;存在敏感字符，请重新输入&quot;,</span>
+<span class="c1"># 并允许用户重新输入，并打印，</span>
+<span class="c1"># 敏感字符：小粉嫩，大铁锤</span>
 
-while True:
-    remark = input(&#39;请输入评论：&#39;)
-    if remark.find(&#39;小粉嫩&#39;) != -1 or remark.find(&#39;大铁锤&#39;) != -1:
-        print(&#39;存在敏感字符，请重新输入&#39;)
-    else:
-        break
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">remark</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;请输入评论：&#39;</span><span class="p">)</span>
+    <span class="n">remark_bans</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;小粉嫩&#39;</span><span class="p">,</span> <span class="s">&#39;大铁锤&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ban</span> <span class="ow">in</span> <span class="n">remark_bans</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ban</span> <span class="ow">in</span> <span class="n">remark</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&#39;存在敏感字符，请重新输入&#39;</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
 </pre></div>
 
 <div class="codehilite"><pre>C:\Users\xuluchuan\AppData\Local\Programs\Python\Python36\python.exe D:/develop/my/python/day002/code/sensitive_word.py
@@ -1413,8 +1416,8 @@ while True:
 <li>2.python2的print是关键字print &lsquo;a&rsquo;，python3的print是函数 print(&lsquo;a&rsquo;)</li>
 </ul>
 <h2 id="17">17. 看代码书写结果：<a class="headerlink" href="#17" title="Permanent link"></a></h2>
-<div class="codehilite"><pre>a = 1 &gt; 2 or 4 &lt; 7 and 8 == 8
-print(a)
+<div class="codehilite"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="ow">and</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">8</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 
 <div class="codehilite"><pre>a = False or True and True
@@ -1433,8 +1436,8 @@ a = True
 <li>负数补码=反码+1</li>
 <li>8421码</li>
 </ul>
-<div class="codehilite"><pre>a=12&amp;127
-print(a)
+<div class="codehilite"><pre><span class="n">a</span><span class="o">=</span><span class="mi">12</span><span class="o">&amp;</span><span class="mi">127</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 
 <ul>
