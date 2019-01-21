@@ -1,0 +1,5 @@
+content = input('请输入内容：')
+add_list = content.split('+')
+x = int(add_list[0].strip())
+y = int(add_list[1].strip())
+print('%d + %d = %d' % (x, y, x + y))
