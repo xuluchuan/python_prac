@@ -21,6 +21,51 @@
 - 顾头不顾尾
 - range(1, 10, -1) 无输结果
 
+```python
+li = [1, 2, [1, 2]]
+print(li[2][0])
+tu = (1, 2, [1, 2])
+print(tu)
+tu[2][0] = 2
+print(tu)
+print(''.join(['2', '3', '4']))
+print('-' * 10)
+for i in range(5):
+    print(i)
+print('-' * 10)
+for i in range(1, 5, 2):
+    print(i)
+print('-' * 10)
+for i in range(5, 1, -1):
+    print(i)
+print('-' * 10)
+for i in range(1, 5, -1):
+    print(i)
+```
+
+```
+C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_2.py
+1
+(1, 2, [1, 2])
+(1, 2, [2, 2])
+234
+----------
+0
+1
+2
+3
+4
+----------
+1
+3
+----------
+5
+4
+3
+2
+----------
+```
+
 ## 循环打印嵌套列表
 
 ```python
