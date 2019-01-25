@@ -1055,96 +1055,222 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>02列表嵌套-元组-for嵌套</title></head><body><article class="markdown-body"><h2 id="_1">列表嵌套<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
-<ul>
-<li><code>li=[1,2,[1,2]]</code> 列表嵌套</li>
-<li><code>print(li[2][0])</code> 连续取值</li>
-</ul>
-<h2 id="_2">元组<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
-<ul>
-<li>只读列表 只能查询，不能修改，可以切片</li>
-<li><code>tu = (1, 2)</code></li>
-<li>一个元素 <code>tu = (1,)</code></li>
-<li>儿子不能改，孙子可以改</li>
-</ul>
-<h2 id="join">join<a class="headerlink" href="#join" title="Permanent link"></a></h2>
-<ul>
-<li>列表转换为字符串使用join方法</li>
-<li>join方法 字符串.join(可迭代对象) 将可迭代对象用字符串连接起来</li>
-</ul>
-<h2 id="range">range<a class="headerlink" href="#range" title="Permanent link"></a></h2>
-<ul>
-<li>列表，数字范围 range(start,end,step) 0开始不用写start </li>
-<li>顾头不顾尾</li>
-<li>range(1, 10, -1) 无输结果</li>
-</ul>
-<div class="codehilite"><pre><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">tu</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">tu</span><span class="p">)</span>
-<span class="n">tu</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">print</span><span class="p">(</span><span class="n">tu</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;2&#39;</span><span class="p">,</span> <span class="s">&#39;3&#39;</span><span class="p">,</span> <span class="s">&#39;4&#39;</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</style><title>03作业</title></head><body><article class="markdown-body"><h1 id="_1">作业<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="1">1. 写代码，有如下列表，要求实现如下功能<a class="headerlink" href="#1" title="Permanent link"></a></h2>
+<p>li = [&lsquo;alex&rsquo;, &lsquo;wusir&rsquo;, &lsquo;eric&rsquo;, &lsquo;rain&rsquo;, &lsquo;alex&rsquo;]</p>
+<h3 id="11">1.1 计算列表的长度并输出<a class="headerlink" href="#11" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>print(len(li))
 </pre></div>
 
-<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_2.py
-1
-(1, 2, [1, 2])
-(1, 2, [2, 2])
-234
-----------
-0
-1
-2
-3
-4
-----------
-1
-3
-----------
+<h3 id="12-seven">1.2 列表中追加元素 &lsquo;seven&rsquo;，并打印列表<a class="headerlink" href="#12-seven" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>li.append(&#39;seven&#39;)
+print(li)
+</pre></div>
+
+<h3 id="13-tony">1.3 在列表第一个位置添加&rsquo;Tony&rsquo;<a class="headerlink" href="#13-tony" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>li.insert(0, &#39;Tony&#39;)
+print(li)
+</pre></div>
+
+<h3 id="14-2kelly">1.4 修改列表第2个位置的元素为&rsquo;kelly&rsquo;<a class="headerlink" href="#14-2kelly" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>li[1] = &#39;kelly&#39;
+print(li)
+</pre></div>
+
+<h3 id="15-l21a34heartli">1.5 将列表l2=[1,&rsquo;a&rsquo;,3,4,&rsquo;heart&rsquo;]的每一个元素添加到列表li中，一行代码实现，不允许循环添加<a class="headerlink" href="#15-l21a34heartli" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l2 = [1,&#39;a&#39;,3,4,&#39;heart&#39;]
+li.extend(l2)
+print(li)
+</pre></div>
+
+<h3 id="16-sqwertli">1.6 将字符串s=&rsquo;qwert&rsquo;的每一个元素添加到列表li中，一行代码实现，不允许循环添加<a class="headerlink" href="#16-sqwertli" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>s = &#39;qwert&#39;
+li[0:0]=s
+print(li)
+</pre></div>
+
+<h3 id="17-eric">1.7 请删除列表中的元素&rsquo;eric&rsquo;，并输出添加后的列表<a class="headerlink" href="#17-eric" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>li.remove(&#39;eric&#39;)
+print(li)
+</pre></div>
+
+<h3 id="18">1.8 请删除列表中的第二个元素，并输出删除的元素和删除后的列表<a class="headerlink" href="#18" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>removed_unit = li.pop(1)
+print(removed_unit)
+print(li)
+</pre></div>
+
+<h3 id="19">1.9 请删除列表中的第二个到第四个元素，并输出删除后的列表<a class="headerlink" href="#19" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>del li[1:4]
+print(li)
+</pre></div>
+
+<h3 id="110">1.10 将列表中所有的元素反转，并输出反转后的列表<a class="headerlink" href="#110" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>li.reverse()
+print(li)
+</pre></div>
+
+<h3 id="111-alex">1.11 请计算&rsquo;alex&rsquo; 元素在列表出现的次数 并输出该数<a class="headerlink" href="#111-alex" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>print(li.count(&#39;alex&#39;))
+</pre></div>
+
+<div class="codehilite"><pre><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;alex&#39;</span><span class="p">,</span> <span class="s">&#39;wusir&#39;</span><span class="p">,</span> <span class="s">&#39;eric&#39;</span><span class="p">,</span> <span class="s">&#39;rain&#39;</span><span class="p">,</span> <span class="s">&#39;alex&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">li</span><span class="p">))</span>
+<span class="n">li</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;seven&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">li</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&#39;Tony&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;kelly&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;heart&#39;</span><span class="p">]</span>
+<span class="n">li</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s">&#39;qwert&#39;</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">li</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&#39;eric&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">removed_unit</span> <span class="o">=</span> <span class="n">li</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">removed_unit</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">li</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#39;alex&#39;</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_3.py
 5
-4
-3
-2
-----------
+[&#39;alex&#39;, &#39;wusir&#39;, &#39;eric&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;]
+[&#39;Tony&#39;, &#39;alex&#39;, &#39;wusir&#39;, &#39;eric&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;]
+[&#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;eric&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;]
+[&#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;eric&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;, 1, &#39;a&#39;, 3, 4, &#39;heart&#39;]
+[&#39;q&#39;, &#39;w&#39;, &#39;e&#39;, &#39;r&#39;, &#39;t&#39;, &#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;eric&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;, 1, &#39;a&#39;, 3, 4, &#39;heart&#39;]
+[&#39;q&#39;, &#39;w&#39;, &#39;e&#39;, &#39;r&#39;, &#39;t&#39;, &#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;, 1, &#39;a&#39;, 3, 4, &#39;heart&#39;]
+w
+[&#39;q&#39;, &#39;e&#39;, &#39;r&#39;, &#39;t&#39;, &#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;, 1, &#39;a&#39;, 3, 4, &#39;heart&#39;]
+[&#39;q&#39;, &#39;Tony&#39;, &#39;kelly&#39;, &#39;wusir&#39;, &#39;rain&#39;, &#39;alex&#39;, &#39;seven&#39;, 1, &#39;a&#39;, 3, 4, &#39;heart&#39;]
+[&#39;heart&#39;, 4, 3, &#39;a&#39;, 1, &#39;seven&#39;, &#39;alex&#39;, &#39;rain&#39;, &#39;wusir&#39;, &#39;kelly&#39;, &#39;Tony&#39;, &#39;q&#39;]
+1
 </pre></div>
 
-<h2 id="_3">循环打印嵌套列表<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">print_list</span><span class="p">(</span><span class="n">li</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
+<h2 id="2">2. 写代码，利用切片实现功能<a class="headerlink" href="#2" title="Permanent link"></a></h2>
+<p><code>li = [1, 3, 2, 'a', 4, 'b', 5, 'c']</code></p>
+<h3 id="21-li-l1-1-3-2">2.1 通过对li列表的切片形成新的列表 l1 = [1, 3, 2]<a class="headerlink" href="#21-li-l1-1-3-2" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l1 = li[:3]
+</pre></div>
+
+<h3 id="22-l2-a-4-b">2.2 l2 = [&lsquo;a&rsquo;, 4 , &lsquo;b&rsquo;]<a class="headerlink" href="#22-l2-a-4-b" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l2 = li[3:6]
+</pre></div>
+
+<h3 id="23-l3-1-2-4-5">2.3 l3 = [1, 2, 4, 5]<a class="headerlink" href="#23-l3-1-2-4-5" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l3 = li[::2]
+</pre></div>
+
+<h3 id="24-l4-3-a-b">2.4 l4 = [3, &lsquo;a&rsquo;, &lsquo;b&rsquo;]<a class="headerlink" href="#24-l4-3-a-b" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l4 = li[1:-2:2]
+</pre></div>
+
+<h3 id="25-l5-c">2.5 l5 = [&lsquo;c&rsquo;]<a class="headerlink" href="#25-l5-c" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l5 = list(li[-1])
+</pre></div>
+
+<h3 id="26-l6-b-a-3">2.6 l6 = [&lsquo;b&rsquo;, &lsquo;a&rsquo;, 3]<a class="headerlink" href="#26-l6-b-a-3" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>l6 = li[-3::-2]
+</pre></div>
+
+<p><div class="codehilite"><pre><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">]</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">li</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">li</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">li</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span>
+<span class="n">l4</span> <span class="o">=</span> <span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l4</span><span class="p">)</span>
+<span class="n">l5</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l5</span><span class="p">)</span>
+<span class="n">l6</span> <span class="o">=</span> <span class="n">li</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l6</span><span class="p">)</span>
+</pre></div>
+<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_4.py
+[1, 3, 2]
+[&#39;a&#39;, 4, &#39;b&#39;]
+[1, 2, 4, 5]
+[3, &#39;a&#39;, &#39;b&#39;]
+[&#39;c&#39;]
+[&#39;b&#39;, &#39;a&#39;, 3]
+</pre></div></p>
+<h2 id="3-lis-2-3-k-qwe-20-k1-tt-3-1-89-ab-adv">3. lis = [2, 3, &lsquo;k&rsquo;, [&lsquo;qwe&rsquo;, 20, [&lsquo;k1&rsquo;, [&lsquo;tt&rsquo;, 3, &lsquo;1&rsquo;], 89], &lsquo;ab&rsquo;, &lsquo;adv&rsquo;]]<a class="headerlink" href="#3-lis-2-3-k-qwe-20-k1-tt-3-1-89-ab-adv" title="Permanent link"></a></h2>
+<h3 id="31-listt">3.1 lis中的&rsquo;tt&rsquo;变为大写，两种方法<a class="headerlink" href="#31-listt" title="Permanent link"></a></h3>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">replace_str_to_upper</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
-            <span class="n">print_list</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">replace_str_to_upper</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">li</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">li</span><span class="p">[</span><span class="n">li</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 
 
 <span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;k&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;qwe&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;k1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;tt&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;1&#39;</span><span class="p">],</span> <span class="mi">89</span><span class="p">],</span> <span class="s">&#39;ab&#39;</span><span class="p">,</span> <span class="s">&#39;adv&#39;</span><span class="p">]]</span>
-<span class="n">print_list</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
+<span class="n">ss</span> <span class="o">=</span> <span class="s">&#39;tt&#39;</span>
+<span class="c1"># lis[-1][2][1][0] = lis[-1][2][1][0].upper()</span>
+<span class="n">replace_str_to_upper</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">ss</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
 </pre></div>
 
-<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/for_list.py
-2
-3
-k
-qwe
-20
-k1
-tt
-3
-1
-89
-ab
-adv
+<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_5.py
+[2, 3, &#39;k&#39;, [&#39;qwe&#39;, 20, [&#39;k1&#39;, [&#39;TT&#39;, 3, &#39;1&#39;], 89], &#39;ab&#39;, &#39;adv&#39;]]
+</pre></div>
+
+<h3 id="32-lis3100">3.2 lis中的3变为&lsquo;100&rsquo;，两种方法<a class="headerlink" href="#32-lis3100" title="Permanent link"></a></h3>
+<h3 id="33-lis1101">3.3 lis中的&lsquo;1&rsquo;变为101，两种方法<a class="headerlink" href="#33-lis1101" title="Permanent link"></a></h3>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">replace_str_to_upper</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+            <span class="n">replace_str_to_upper</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">li</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">li</span><span class="p">[</span><span class="n">li</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">replace_a_to_b</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+            <span class="n">replace_a_to_b</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">li</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">li</span><span class="p">[</span><span class="n">li</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span> <span class="o">=</span> <span class="n">b</span>
+
+
+<span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;k&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;qwe&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;k1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;tt&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;1&#39;</span><span class="p">],</span> <span class="mi">89</span><span class="p">],</span> <span class="s">&#39;ab&#39;</span><span class="p">,</span> <span class="s">&#39;adv&#39;</span><span class="p">]]</span>
+<span class="n">ss</span> <span class="o">=</span> <span class="s">&#39;tt&#39;</span>
+<span class="c1"># lis[-1][2][1][0] = lis[-1][2][1][0].upper()</span>
+<span class="n">replace_str_to_upper</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">ss</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="s">&#39;100&#39;</span>
+<span class="c1"># lis[1] = &#39;100&#39;</span>
+<span class="c1"># lis[3][2][1][1] = &#39;100&#39;</span>
+<span class="n">replace_a_to_b</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="s">&#39;1&#39;</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="mi">101</span>
+<span class="c1"># lis[3][2][1][2] = 101</span>
+<span class="n">replace_a_to_b</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_5.py
+[2, 3, &#39;k&#39;, [&#39;qwe&#39;, 20, [&#39;k1&#39;, [&#39;TT&#39;, 3, &#39;1&#39;], 89], &#39;ab&#39;, &#39;adv&#39;]]
+[2, &#39;100&#39;, &#39;k&#39;, [&#39;qwe&#39;, 20, [&#39;k1&#39;, [&#39;TT&#39;, &#39;100&#39;, &#39;1&#39;], 89], &#39;ab&#39;, &#39;adv&#39;]]
+[2, &#39;100&#39;, &#39;k&#39;, [&#39;qwe&#39;, 20, [&#39;k1&#39;, [&#39;TT&#39;, &#39;100&#39;, 101], 89], &#39;ab&#39;, &#39;adv&#39;]]
+</pre></div>
+
+<h2 id="4-lialex-eric-rain-alex_eric_rain">4. li=[&lsquo;alex&rsquo;, &lsquo;eric&rsquo;, &lsquo;rain&rsquo;] 拼接成字符串 &lsquo;alex_eric_rain&rsquo;<a class="headerlink" href="#4-lialex-eric-rain-alex_eric_rain" title="Permanent link"></a></h2>
+<div class="codehilite"><pre><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;alex&#39;</span><span class="p">,</span> <span class="s">&#39;eric&#39;</span><span class="p">,</span> <span class="s">&#39;rain&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">li</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre>C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe D:/xuluchuan/class/python/python_prac/day004/code/list_prac_6.py
+alex_eric_rain
 </pre></div></article></body></html>

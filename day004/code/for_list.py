@@ -1,9 +1,10 @@
-from collections import Iterable
-
-li = [0, 1, 2, [3, 4, 5]]
-for i in li:
-    if isinstance(i, Iterable):
-        for j in i:
-            print(j)
+def print_list(li):
+    if not isinstance(li, list):
+        print(li)
     else:
-        print(i)
+        for i in li:
+            print_list(i)
+
+
+lis = [2, 3, 'k', ['qwe', 20, ['k1', ['tt', 3, '1'], 89], 'ab', 'adv']]
+print_list(lis)
