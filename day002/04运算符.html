@@ -1083,10 +1083,12 @@ body .markdown-body
 <li>非0为真，0为假</li>
 <li>True转为int为1，False转为int为0</li>
 <li>短路效果 or左遇真为真 and左遇假为假 </li>
-<li>3 or 0 返回3</li>
-<li>3 or 4 返回3</li>
-<li>0 or 4 返回4</li>
-<li>0 or 0 返回0</li>
+<li>a or b，a，b为int或bool，a为真返回a，a为假返回b</li>
+<li>3 or 0 返回3 a为真返回a</li>
+<li>3 or 4 返回3 a为真返回a</li>
+<li>0 or 4 返回4 a为假返回b</li>
+<li>0 or 0 返回0 a为假返回b</li>
+<li>a and b, a,b 为int或bool，a为假返回a，a为真返回b</li>
 <li>1 and 2 返回2</li>
 <li>1 and 0 返回0</li>
 <li>0 and 2 返回0</li>
