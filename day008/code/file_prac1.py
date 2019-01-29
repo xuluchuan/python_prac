@@ -1,0 +1,6 @@
+f = open('a.txt', mode='r', encoding='utf-8')
+content = f.read()
+print(content)
+li = content.split('\n')
+print(li)
+f.close()
