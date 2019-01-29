@@ -1,0 +1,8 @@
+f = open('log', mode='r+', encoding='utf-8')
+f.read()
+f.write('你好')
+count = f.tell()
+f.seek(count - 9)
+content = f.read()
+print(content)
+f.close()

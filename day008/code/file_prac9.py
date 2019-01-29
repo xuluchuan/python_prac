@@ -1,0 +1,6 @@
+f = open('a.txt', mode='a+', encoding='utf-8')
+f.write('你好吗？')
+f.seek(0)
+content = f.read()
+print(content)
+f.close()

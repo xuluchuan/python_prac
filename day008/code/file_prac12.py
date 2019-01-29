@@ -1,0 +1,7 @@
+f = open('log', mode='r', encoding='utf-8')
+line1 = f.readline()
+print(line1)
+f.seek(0)
+content = f.readlines()
+print(content)
+f.close()
